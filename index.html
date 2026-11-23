@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>87 Petshop & Grooming | บริการอาบน้ำ-ตัดขนสัตว์เลี้ยงครบวงจร</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Sarabun', sans-serif; }
+    h1, h2, h3, h4, .font-heading { font-family: 'Kanit', sans-serif; }
+    .glass-card { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(10px); }
+    .modal-backdrop { background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(4px); }
+  </style>
+</head>
+<body class="bg-amber-50/40 text-slate-800 antialiased selection:bg-teal-200 selection:text-teal-900">
+
+  <!-- Top Navbar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-amber-100 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5">
+        <span class="w-10 h-10 rounded-2xl bg-gradient-to-br from-teal-500 to-emerald-600 text-white flex items-center justify-center text-xl shadow-sm">🐾</span>
+        <div>
+          <span class="font-heading font-bold text-lg sm:text-xl text-slate-900 block leading-tight">87 Petshop & Grooming</span>
+          <span class="text-xs text-teal-700 font-medium">อาบน้ำ • ตัดขน • สปา • ดูแลด้วยใจ</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+        <a href="#queue-section" class="hover:text-teal-600 transition">สถานะคิววันนี้</a>
+        <a href="#services" class="hover:text-teal-600 transition">บริการและราคา</a>
+        <a href="#styles" class="hover:text-teal-600 transition">แกลเลอรีทรงขน</a>
+        <a href="#prep" class="hover:text-teal-600 transition">เตรียมตัวก่อนมา</a>
+        <a href="#faq" class="hover:text-teal-600 transition">คลังความรู้</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a id="nav-line-btn" href="https://line.me" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-heading text-sm font-medium px-4 py-2 rounded-full shadow-sm transition flex items-center gap-1.5">
+          <span>💬</span> <span>ทักแชตจองคิว</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-teal-50 via-amber-50/50 to-white pt-10 pb-14 px-4">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-12 gap-8 items-center">
+      <div class="md:col-span-7 space-y-5">
+        <div class="inline-flex items-center gap-2 bg-white border border-teal-200 text-teal-800 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+          <span>ดูแลแบบตัวต่อตัว • ไม่ขังกรงรวม • ผลิตภัณฑ์อ่อนโยนต่อผิวแพ้ง่าย</span>
+        </div>
+        <h1 class="font-heading text-3xl sm:text-5xl font-bold text-slate-900 leading-tight">
+          ให้ลูกรักของคุณสะอาด หอม นุ่มฟู และผ่อนคลายที่สุดที่ <span class="text-teal-600">87 Petshop & Grooming</span>
+        </h1>
+        <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+          บริการอาบน้ำ ตัดขน สปาโอโซน และดูแลความสะอาดครบวงจรสำหรับน้องหมาและน้องแมวทุกสายพันธุ์ เช็กคิวว่าง ประเมินราคา และเลือกทรงขนที่ถูกใจได้ทันที
+        </p>
+        <div class="flex flex-wrap gap-3 pt-1">
+          <a id="hero-line-btn" href="https://line.me" target="_blank" class="bg-teal-600 hover:bg-teal-700 text-white font-heading font-medium px-6 py-3 rounded-2xl shadow-md transition flex items-center gap-2">
+            <span>📅 จองคิวผ่าน LINE</span>
+          </a>
+          <a href="#services" class="bg-white hover:bg-amber-50 text-slate-800 border border-slate-200 font-heading font-medium px-6 py-3 rounded-2xl transition">
+            เช็กราคาเริ่มต้น
+          </a>
+        </div>
+      </div>
+
+      <!-- Live Queue Card -->
+      <div id="queue-section" class="md:col-span-5">
+        <div class="glass-card border border-teal-100 rounded-3xl p-6 shadow-lg">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-teal-600">Live Queue Status</span>
+              <h2 class="font-heading text-xl font-bold text-slate-900">สถานะคิวหน้าร้านวันนี้</h2>
+            </div>
+            <span id="queue-badge" class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
+              🟢 คิวว่าง พร้อมรับน้องๆ
+            </span>
+          </div>
+
+          <div class="space-y-4">
+            <div class="bg-amber-50/80 border border-amber-100 rounded-2xl p-4">
+              <p class="text-xs text-slate-500 mb-1">ประกาศจากทางร้าน:</p>
+              <p id="queue-note" class="text-sm font-medium text-slate-800 leading-relaxed">
+                วันนี้เปิดให้บริการปกติ 09:30 - 19:30 น. แนะนำทักแชตจองคิวล่วงหน้าเพื่อไม่ต้องรอนานนะคะ
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 text-center">
+              <div class="bg-white border border-slate-100 rounded-2xl p-3">
+                <span class="text-xs text-slate-500 block">ช่วงเช้า (09:30 - 13:00)</span>
+                <span id="queue-morning" class="font-heading font-semibold text-base text-teal-700 mt-0.5 block">ว่าง 2 คิว</span>
+              </div>
+              <div class="bg-white border border-slate-100 rounded-2xl p-3">
+                <span class="text-xs text-slate-500 block">ช่วงบ่าย (13:30 - 18:30)</span>
+                <span id="queue-afternoon" class="font-heading font-semibold text-base text-amber-600 mt-0.5 block">ว่าง 1 คิว</span>
+              </div>
+            </div>
+
+            <p class="text-[11px] text-slate-400 text-right">อัปเดตล่าสุด: <span id="queue-updated">วันนี้</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services & Price Calculator -->
+  <section id="services" class="py-14 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-teal-600">Services & Pricing</span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-bold text-slate-900 mt-1">บริการและประเมินราคาเบื้องต้น</h2>
+        <p class="text-slate-600 text-sm mt-2">ราคาอาจปรับตามสภาพขน สังกะตัง และพฤติกรรมของน้องๆ สามารถส่งรูปน้องให้ทางร้านประเมินก่อนได้ค่ะ</p>
+      </div>
+
+      <!-- Interactive Estimator -->
+      <div class="bg-gradient-to-r from-teal-50 to-emerald-50 border border-teal-100 rounded-3xl p-6 sm:p-8 mb-10 shadow-sm">
+        <h3 class="font-heading text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <span>🧮</span> ประเมินค่าบริการเบื้องต้นสำหรับลูกรัก
+        </h3>
+        <div class="grid sm:grid-cols-4 gap-4 items-end">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1.5">ประเภทสัตว์เลี้ยง</label>
+            <select id="calc-pet" class="w-full bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-teal-500">
+              <option value="dog">🐶 น้องหมา</option>
+              <option value="cat">🐱 น้องแมว</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1.5">ขนาดน้ำหนักตัว</label>
+            <select id="calc-size" class="w-full bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-teal-500">
+              <option value="xs">เล็กพิเศษ (ไม่เกิน 5 กก.)</option>
+              <option value="s">เล็ก (5 - 10 กก.)</option>
+              <option value="m">กลาง (10 - 20 กก.)</option>
+              <option value="l">ใหญ่ (20 กก. ขึ้นไป)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1.5">บริการที่ต้องการ</label>
+            <select id="calc-service" class="w-full bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-teal-500">
+              <option value="bath">อาบน้ำ + เป่าขน + เช็ดหูตัดเล็บ</option>
+              <option value="groom">อาบน้ำ + ตัดขนแต่งทรง</option>
+              <option value="spa">แพ็กเกจอาบน้ำ + สปาบำรุงขน</option>
+            </select>
+          </div>
+          <div class="bg-white border border-teal-200 rounded-2xl px-4 py-2.5 text-center shadow-sm">
+            <span class="text-xs text-slate-500 block">ราคาเริ่มต้นโดยประมาณ</span>
+            <span id="calc-result" class="font-heading text-2xl font-bold text-teal-700">350 ฿</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Price Cards Grid -->
+      <div id="price-cards-container" class="grid md:grid-cols-3 gap-6">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Grooming Styles Gallery -->
+  <section id="styles" class="py-14 px-4 bg-amber-50/50">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Grooming Styles</span>
+          <h2 class="font-heading text-2xl sm:text-3xl font-bold text-slate-900 mt-1">ไอเดียทรงขนยอดฮิต</h2>
+          <p class="text-slate-600 text-sm mt-1">เลือกทรงขนที่ชอบแล้วแคปหน้าจอส่งให้ช่างดูตอนจองคิวได้เลยค่ะ</p>
+        </div>
+        <div class="flex gap-2">
+          <button onclick="filterStyles('all')" class="style-filter-btn active px-4 py-1.5 rounded-full text-xs font-semibold bg-teal-600 text-white transition" data-filter="all">ทั้งหมด</button>
+          <button onclick="filterStyles('dog')" class="style-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-teal-50 transition" data-filter="dog">🐶 น้องหมา</button>
+          <button onclick="filterStyles('cat')" class="style-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-teal-50 transition" data-filter="cat">🐱 น้องแมว</button>
+        </div>
+      </div>
+
+      <div id="styles-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Owner Checklist -->
+  <section id="prep" class="py-14 px-4 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-8">
+        <span class="text-xs font-bold uppercase tracking-wider text-teal-600">Preparation Checklist</span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-bold text-slate-900 mt-1">เช็กลิสต์เตรียมตัวก่อนพาลูกรักมาที่ร้าน</h2>
+        <p class="text-slate-600 text-sm mt-1">ติ๊กตรวจสอบความพร้อมเพื่อให้การอาบน้ำ-ตัดขนปลอดภัยและราบรื่นที่สุด</p>
+      </div>
+
+      <div class="bg-teal-50/60 border border-teal-100 rounded-3xl p-6 sm:p-8 space-y-3">
+        <label class="flex items-start gap-3 bg-white p-4 rounded-2xl border border-slate-100 cursor-pointer hover:border-teal-300 transition">
+          <input type="checkbox" class="mt-1 w-5 h-5 accent-teal-600 rounded" />
+          <div>
+            <span class="font-heading font-semibold text-slate-900 block">1. วัคซีนพื้นฐานครบถ้วนและสุขภาพแข็งแรง</span>
+            <span class="text-xs text-slate-500">น้องไม่มีอาการซึม ท้องเสีย มีไข้ หรือเพิ่งผ่าตัด/ทำหมันมาไม่ถึง 14 วัน</span>
+          </div>
+        </label>
+        <label class="flex items-start gap-3 bg-white p-4 rounded-2xl border border-slate-100 cursor-pointer hover:border-teal-300 transition">
+          <input type="checkbox" class="mt-1 w-5 h-5 accent-teal-600 rounded" />
+          <div>
+            <span class="font-heading font-semibold text-slate-900 block">2. พาเดินขับถ่ายให้เรียบร้อยก่อนเข้าร้าน</span>
+            <span class="text-xs text-slate-500">ช่วยให้น้องสบายตัว ไม่เครียดหรืออั้นขับถ่ายระหว่างเป่าขนและตัดขน</span>
+          </div>
+        </label>
+        <label class="flex items-start gap-3 bg-white p-4 rounded-2xl border border-slate-100 cursor-pointer hover:border-teal-300 transition">
+          <input type="checkbox" class="mt-1 w-5 h-5 accent-teal-600 rounded" />
+          <div>
+            <span class="font-heading font-semibold text-slate-900 block">3. แจ้งข้อมูลโรคประจำตัว จุดที่น้องหวง หรือการแพ้แชมพู</span>
+            <span class="text-xs text-slate-500">เช่น น้องเป็นโรคหัวใจ ลมชัก ผิวหนังอักเสบ หรือไม่ชอบให้จับอุ้งเท้า</span>
+          </div>
+        </label>
+        <label class="flex items-start gap-3 bg-white p-4 rounded-2xl border border-slate-100 cursor-pointer hover:border-teal-300 transition">
+          <input type="checkbox" class="mt-1 w-5 h-5 accent-teal-600 rounded" />
+          <div>
+            <span class="font-heading font-semibold text-slate-900 block">4. ใส่สายจูงหรือกระเป๋า/ตะกร้าสำหรับน้องแมวทุกครั้ง</span>
+            <span class="text-xs text-slate-500">เพื่อความปลอดภัยขณะรับ-ส่งน้องบริเวณหน้าร้าน</span>
+          </div>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Knowledge & FAQ -->
+  <section id="faq" class="py-14 px-4 bg-slate-50">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-8">
+        <span class="text-xs font-bold uppercase tracking-wider text-teal-600">Pet Care Knowledge & FAQ</span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-bold text-slate-900 mt-1">คำถามที่พบบ่อย & เคล็ดลับดูแลขน</h2>
+      </div>
+      <div id="faq-container" class="space-y-3">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Location -->
+  <section id="contact" class="py-14 px-4 bg-white border-t border-slate-100">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-teal-600">Visit & Contact Us</span>
+        <h2 class="font-heading text-2xl sm:text-3xl font-bold text-slate-900">ติดต่อสอบถามและจองคิว</h2>
+        <p id="shop-address" class="text-slate-600 text-sm leading-relaxed">
+          📍 ร้าน 87 Petshop & Grooming เปิดให้บริการทุกวัน เวลา 09:30 - 19:30 น. มีที่จอดรถสะดวกหน้าร้าน
+        </p>
+        <div class="space-y-2 text-sm text-slate-700">
+          <p>📞 โทรศัพท์: <a id="shop-phone-link" href="tel:0800000087" class="font-semibold text-teal-700 hover:underline"><span id="shop-phone-text">080-000-0087</span></a></p>
+          <p>💬 LINE Official: <span id="shop-line-id" class="font-semibold text-emerald-700">@87petshop</span></p>
+        </div>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a id="footer-line-btn" href="https://line.me" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-heading text-sm font-medium px-5 py-2.5 rounded-xl shadow-sm transition">
+            แอดไลน์จองคิวทันที
+          </a>
+          <a id="footer-map-btn" href="https://maps.google.com" target="_blank" class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-heading text-sm font-medium px-5 py-2.5 rounded-xl transition">
+            เปิดแผนที่ Google Maps
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-teal-600 to-emerald-700 text-white rounded-3xl p-7 shadow-lg space-y-4">
+        <h3 class="font-heading text-xl font-bold">ส่งข้อความจองคิวด่วนทาง LINE</h3>
+        <p class="text-teal-100 text-xs">กรอกข้อมูลเบื้องต้นด้านล่าง แล้วกดปุ่มเพื่อคัดลอกข้อความส่งเข้าแชต LINE ของร้านได้ทันที</p>
+        <div class="grid sm:grid-cols-2 gap-3 text-slate-800">
+          <input id="quick-name" type="text" placeholder="ชื่อน้อง / สายพันธุ์" class="w-full rounded-xl px-3.5 py-2 text-sm bg-white focus:outline-none" />
+          <input id="quick-date" type="text" placeholder="วันและเวลาที่ต้องการ (เช่น เสาร์ 14:00)" class="w-full rounded-xl px-3.5 py-2 text-sm bg-white focus:outline-none" />
+        </div>
+        <button onclick="copyBookingMessage()" class="w-full bg-amber-400 hover:bg-amber-300 text-slate-900 font-heading font-bold py-2.5 rounded-xl shadow transition text-sm">
+          📋 คัดลอกข้อความจองคิว
+        </button>
+        <p id="copy-feedback" class="text-xs text-amber-200 text-center hidden">คัดลอกข้อความเรียบร้อยแล้ว! กดวางในแชต LINE ได้เลยค่ะ</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Subtle Admin Login Trigger -->
+  <footer class="bg-slate-900 text-slate-400 py-8 px-4 text-xs">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 87 Petshop & Grooming. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <span>ดูแลลูกรักด้วยความใส่ใจทุกขั้นตอน 🐾</span>
+        <button onclick="openAdminModal()" class="inline-flex items-center gap-1.5 text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700 transition">
+          <span>🔒</span>
+          <span id="footer-admin-label">สำหรับผู้ดูแลร้าน</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================= -->
+  <!-- INTEGRATED ADMIN LOGIN & DASHBOARD MODAL (SINGLE-FILE)    -->
+  <!-- ========================================================= -->
+  <div id="admin-modal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div class="bg-white w-full max-w-4xl rounded-3xl shadow-2xl border border-slate-200 overflow-hidden my-auto">
+      
+      <!-- Modal Top Header -->
+      <div class="bg-slate-900 text-white px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <span class="text-xl">🛠️</span>
+          <div>
+            <h3 class="font-heading font-bold text-base sm:text-lg leading-tight">ระบบหลังบ้าน 87 Petshop & Grooming</h3>
+            <p class="text-[11px] text-slate-400">แก้ไขข้อมูลแล้วอัปเดตบนหน้าเว็บทันที</p>
+          </div>
+        </div>
+        <button onclick="closeAdminModal()" class="text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 w-8 h-8 rounded-full flex items-center justify-center text-lg transition">✕</button>
+      </div>
+
+      <!-- STEP 1: ADMIN LOGIN FORM -->
+      <div id="admin-login-view" class="p-6 sm:p-10 max-w-md mx-auto">
+        <div class="text-center mb-6">
+          <div class="w-14 h-14 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center text-2xl mx-auto mb-3">🔐</div>
+          <h4 class="font-heading text-xl font-bold text-slate-900">เข้าสู่ระบบผู้ดูแลร้าน</h4>
+          <p class="text-xs text-slate-500 mt-1">กรอกชื่อผู้ใช้และรหัสผ่านแอดมินเพื่อจัดการข้อมูลหน้าร้าน</p>
+        </div>
+
+        <form onsubmit="handleAdminLogin(event)" class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">ชื่อผู้ใช้ (Username)</label>
+            <input id="admin-user-input" type="text" required placeholder="กรอกชื่อผู้ใช้" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-teal-600" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">รหัสผ่าน (Password)</label>
+            <input id="admin-pass-input" type="password" required placeholder="กรอกรหัสผ่าน" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-teal-600" />
+          </div>
+          <p id="admin-login-error" class="text-xs text-rose-600 font-medium hidden">ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง กรุณาลองใหม่อีกครั้ง</p>
+          <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-heading font-semibold py-2.5 rounded-xl shadow transition">
+            เข้าสู่ระบบหลังบ้าน
+          </button>
+        </form>
+      </div>
+
+      <!-- STEP 2: ADMIN DASHBOARD PANEL -->
+      <div id="admin-dashboard-view" class="hidden max-h-[82vh] overflow-y-auto">
+        <!-- Admin Tabs -->
+        <div class="bg-slate-100 px-4 sm:px-6 pt-3 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2">
+          <div class="flex flex-wrap gap-1.5">
+            <button onclick="switchAdminTab('queue')" class="admin-tab-btn px-3.5 py-2 rounded-t-xl text-xs font-bold bg-white text-teal-700 border-t border-x border-slate-200" data-tab="queue">📅 จัดการคิววันนี้</button>
+            <button onclick="switchAdminTab('prices')" class="admin-tab-btn px-3.5 py-2 rounded-t-xl text-xs font-semibold text-slate-600 hover:bg-white/60" data-tab="prices">💰 ราคาเริ่มต้น</button>
+            <button onclick="switchAdminTab('styles')" class="admin-tab-btn px-3.5 py-2 rounded-t-xl text-xs font-semibold text-slate-600 hover:bg-white/60" data-tab="styles">✂️ ทรงขน</button>
+            <button onclick="switchAdminTab('faq')" class="admin-tab-btn px-3.5 py-2 rounded-t-xl text-xs font-semibold text-slate-600 hover:bg-white/60" data-tab="faq">📚 บทความ/FAQ</button>
+            <button onclick="switchAdminTab('settings')" class="admin-tab-btn px-3.5 py-2 rounded-t-xl text-xs font-semibold text-slate-600 hover:bg-white/60" data-tab="settings">⚙️ ตั้งค่าร้าน</button>
+          </div>
+          <button onclick="handleAdminLogout()" class="text-xs text-rose-600 hover:text-rose-700 font-semibold px-3 py-1.5 mb-1">ออกจากระบบ</button>
+        </div>
+
+        <div class="p-6 space-y-6">
+          <!-- Tab 1: Queue Management -->
+          <div id="tab-queue" class="admin-tab-content space-y-4">
+            <h4 class="font-heading font-bold text-lg text-slate-900">อัปเดตสถานะคิวหน้าร้านวันนี้</h4>
+            <div class="grid sm:grid-cols-3 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">ป้ายสถานะหลัก</label>
+                <select id="edit-queue-status" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm">
+                  <option value="open">🟢 คิวว่าง พร้อมรับน้องๆ</option>
+                  <option value="busy">🟡 คิวเริ่มแน่น ทักเช็กก่อนเข้า</option>
+                  <option value="full">🔴 คิวเต็มแล้ววันนี้</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">สถานะคิวช่วงเช้า</label>
+                <input id="edit-queue-morning" type="text" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">สถานะคิวช่วงบ่าย</label>
+                <input id="edit-queue-afternoon" type="text" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">ข้อความประกาศหน้าร้าน</label>
+              <textarea id="edit-queue-note" rows="2" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm"></textarea>
+            </div>
+            <button onclick="saveQueueSettings()" class="bg-teal-600 hover:bg-teal-700 text-white font-heading text-sm font-medium px-5 py-2.5 rounded-xl shadow">
+              💾 บันทึกสถานะคิวทันที
+            </button>
+          </div>
+
+          <!-- Tab 2: Base Prices -->
+          <div id="tab-prices" class="admin-tab-content hidden space-y-4">
+            <h4 class="font-heading font-bold text-lg text-slate-900">แก้ไขราคาเริ่มต้นแต่ละแพ็กเกจ (บาท)</h4>
+            <div class="grid sm:grid-cols-3 gap-4">
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-2">
+                <span class="font-heading font-bold text-sm text-teal-800 block">1. อาบน้ำ + เป่าขน</span>
+                <label class="block text-xs text-slate-600">ราคาเริ่มต้น (บาท)</label>
+                <input id="edit-price-bath" type="number" class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-sm" />
+              </div>
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-2">
+                <span class="font-heading font-bold text-sm text-teal-800 block">2. อาบน้ำ + ตัดขนแต่งทรง</span>
+                <label class="block text-xs text-slate-600">ราคาเริ่มต้น (บาท)</label>
+                <input id="edit-price-groom" type="number" class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-sm" />
+              </div>
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-2">
+                <span class="font-heading font-bold text-sm text-teal-800 block">3. แพ็กเกจสปาบำรุงขน</span>
+                <label class="block text-xs text-slate-600">ราคาเริ่มต้น (บาท)</label>
+                <input id="edit-price-spa" type="number" class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-sm" />
+              </div>
+            </div>
+            <button onclick="savePriceSettings()" class="bg-teal-600 hover:bg-teal-700 text-white font-heading text-sm font-medium px-5 py-2.5 rounded-xl shadow">
+              💾 บันทึกราคาเริ่มต้น
+            </button>
+          </div>
+
+          <!-- Tab 3: Grooming Styles -->
+          <div id="tab-styles" class="admin-tab-content hidden space-y-4">
+            <h4 class="font-heading font-bold text-lg text-slate-900">เพิ่ม / ลบ แกลเลอรีทรงขน</h4>
+            <div class="bg-amber-50/70 border border-amber-200 rounded-2xl p-4 grid sm:grid-cols-4 gap-3 items-end">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">ประเภท</label>
+                <select id="new-style-pet" class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-sm">
+                  <option value="dog">🐶 น้องหมา</option>
+                  <option value="cat">🐱 น้องแมว</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">ชื่อทรงขน</label>
+                <input id="new-style-title" type="text" placeholder="เช่น ทรงหมีเท็ดดี้" class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-sm" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">รายละเอียดสั้นๆ</label>
+                <input id="new-style-desc" type="text" placeholder="เหมาะกับพุดเดิ้ล ชิสุ" class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-sm" />
+              </div>
+              <button onclick="addNewStyle()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-heading text-sm font-medium py-2 px-4 rounded-xl">
+                + เพิ่มทรงขน
+              </button>
+            </div>
+            <div id="admin-styles-list" class="space-y-2"></div>
+          </div>
+
+          <!-- Tab 4: FAQ Management -->
+          <div id="tab-faq" class="admin-tab-content hidden space-y-4">
+            <h4 class="font-heading font-bold text-lg text-slate-900">จัดการคำถามที่พบบ่อย & บทความ</h4>
+            <div class="bg-teal-50/70 border border-teal-200 rounded-2xl p-4 space-y-3">
+              <input id="new-faq-q" type="text" placeholder="หัวข้อคำถาม / ชื่อบทความ" class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-sm" />
+              <textarea id="new-faq-a" rows="2" placeholder="คำตอบหรือเนื้อหาแนะนำลูกค้า" class="w-full bg-white border border-slate-300 rounded-xl px-3 py-2 text-sm"></textarea>
+              <button onclick="addNewFaq()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-heading text-sm font-medium py-2 px-4 rounded-xl">
+                + เพิ่มหัวข้อใหม่
+              </button>
+            </div>
+            <div id="admin-faq-list" class="space-y-2"></div>
+          </div>
+
+          <!-- Tab 5: Shop Contact Settings -->
+          <div id="tab-settings" class="admin-tab-content hidden space-y-4">
+            <h4 class="font-heading font-bold text-lg text-slate-900">ตั้งค่าช่องทางติดต่อร้าน</h4>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">ลิงก์ LINE Official (URL)</label>
+                <input id="edit-shop-line-url" type="text" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">ชื่อไอดี LINE (@...)</label>
+                <input id="edit-shop-line-id" type="text" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">เบอร์โทรศัพท์ร้าน</label>
+                <input id="edit-shop-phone" type="text" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">ลิงก์ Google Maps</label>
+                <input id="edit-shop-map" type="text" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">ที่อยู่และเวลาเปิด-ปิดร้าน</label>
+              <input id="edit-shop-address" type="text" class="w-full border border-slate-300 rounded-xl px-3 py-2 text-sm" />
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <button onclick="saveShopSettings()" class="bg-teal-600 hover:bg-teal-700 text-white font-heading text-sm font-medium px-5 py-2.5 rounded-xl shadow">
+                💾 บันทึกข้อมูลร้าน
+              </button>
+              <button onclick="resetAllDefaultData()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-heading text-xs font-medium px-4 py-2.5 rounded-xl">
+                รีเซ็ตเป็นค่าเริ่มต้นทั้งหมด
+              </button>
+            </div>
+          </div>
+
+          <div id="admin-save-toast" class="hidden bg-emerald-600 text-white text-xs font-medium px-4 py-2.5 rounded-xl text-center">
+            ✅ บันทึกข้อมูลเรียบร้อยแล้ว! หน้าเว็บอัปเดตทันที
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ==========================================
+    // CREDENTIALS & STORAGE KEYS
+    // ==========================================
+    const ADMIN_USER = "panawanmartmaiy";
+    const ADMIN_PASS = "panawan1407martmaiy";
+    const STORAGE_KEY = "87petshop_site_data_v1";
+    const SESSION_KEY = "87petshop_admin_logged_in";
+
+    const DEFAULT_DATA = {
+      queue: {
+        status: "open",
+        morning: "ว่าง 2 คิว",
+        afternoon: "ว่าง 1 คิว",
+        note: "วันนี้เปิดให้บริการปกติ 09:30 - 19:30 น. แนะนำทักแชตจองคิวล่วงหน้าเพื่อไม่ต้องรอนานนะคะ",
+        updated: "วันนี้ 09:30 น."
+      },
+      prices: {
+        bath: 350,
+        groom: 550,
+        spa: 650
+      },
+      styles: [
+        { id: 1, pet: "dog", title: "ทรงหมีเท็ดดี้ (Teddy Bear)", desc: "ตัดแต่งหน้ากลมน่ารัก ขนฟูสม่ำเสมอ เหมาะกับพุดเดิ้ลและมอลทีส", icon: "🧸" },
+        { id: 2, pet: "dog", title: "ทรงสั้นสบายตัว (Summer Cut)", desc: "ไถสั้นพอดีตัว ดูแลง่าย ลดปัญหาขนพันกันและอับชื้นในอากาศร้อน", icon: "☀️" },
+        { id: 3, pet: "dog", title: "ทรงบู (Boo Cut)", desc: "ตัดแต่งหัวกลมโตและลำตัวสั้นกระชับ เหมาะกับปอมเมอเรเนียน", icon: "🐶" },
+        { id: 4, pet: "cat", title: "อาบน้ำเปิดรูขุมขน + สางขนร่วง", desc: "ลดปัญหาขนร่วงติดบ้าน ขนนุ่มลื่นเงางาม เหมาะกับแมวขนสั้นและขนยาว", icon: "🐱" },
+        { id: 5, pet: "cat", title: "ทรงสิงโต (Lion Cut)", desc: "ไถขนลำตัวสั้น เหลือแผงคอและปลายหาง ลดสังกะตังและก้อนขนในท้อง", icon: "🦁" },
+        { id: 6, pet: "cat", title: "เล็มขนอุ้งเท้า + ก้น + แต่งทรงกลม", desc: "รักษาความสะอาดหลังเข้ากระบะทราย ไม่ให้ทรายติดเท้าและขน", icon: "✨" }
+      ],
+      faqs: [
+        { id: 1, q: "อาบน้ำ-ตัดขนใช้เวลานานประมาณกี่ชั่วโมง?", a: "โดยปกติใช้เวลาประมาณ 1.5 - 2.5 ชั่วโมง ขึ้นอยู่กับขนาดตัว ความหนาของขน และสภาพสังกะตังของน้องค่ะ ทางร้านดูแลทีละตัวเพื่อให้ไม่เครียด" },
+        { id: 2, q: "น้องแมวดุหรือไม่เคยอาบน้ำที่ร้านมาก่อน รับไหมคะ?", a: "รับดูแลค่ะ ช่างมีประสบการณ์รับมือน้องแมวขี้กลัว แนะนำแจ้งนิสัยน้องล่วงหน้าตอนจองคิวเพื่อจัดช่วงเวลาที่ร้านเงียบสงบให้ค่ะ" },
+        { id: 3, q: "ควรพาลูกๆ มาอาบน้ำบ่อยแค่ไหน?", a: "แนะนำทุกๆ 2 - 4 สัปดาห์ เพื่อรักษาความสะอาดของผิวหนัง ลดกลิ่นตัว และช่วยให้ช่างช่วยเช็กสุขภาพผิวหนังและช่องหูเป็นประจำค่ะ" }
+      ],
+      shop: {
+        lineUrl: "https://line.me",
+        lineId: "@87petshop",
+        phone: "080-000-0087",
+        mapUrl: "https://maps.google.com",
+        address: "📍 ร้าน 87 Petshop & Grooming เปิดให้บริการทุกวัน เวลา 09:30 - 19:30 น. มีที่จอดรถสะดวกหน้าร้าน"
+      }
+    };
+
+    let siteData = loadSiteData();
+    let currentStyleFilter = "all";
+
+    function loadSiteData() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) return { ...DEFAULT_DATA, ...JSON.parse(saved) };
+      } catch (e) {}
+      return JSON.parse(JSON.stringify(DEFAULT_DATA));
+    }
+
+    function saveSiteData() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(siteData));
+      renderAllPublicSections();
+      showToast();
+    }
+
+    // ==========================================
+    // RENDER PUBLIC SECTIONS
+    // ==========================================
+    function renderAllPublicSections() {
+      // Queue
+      const badgeEl = document.getElementById("queue-badge");
+      if (siteData.queue.status === "open") {
+        badgeEl.className = "px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800";
+        badgeEl.textContent = "🟢 คิวว่าง พร้อมรับน้องๆ";
+      } else if (siteData.queue.status === "busy") {
+        badgeEl.className = "px-3.5 py-1.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800";
+        badgeEl.textContent = "🟡 คิวเริ่มแน่น ทักเช็กก่อนเข้า";
+      } else {
+        badgeEl.className = "px-3.5 py-1.5 rounded-full text-xs font-bold bg-rose-100 text-rose-800";
+        badgeEl.textContent = "🔴 คิวเต็มแล้ววันนี้";
+      }
+      document.getElementById("queue-morning").textContent = siteData.queue.morning;
+      document.getElementById("queue-afternoon").textContent = siteData.queue.afternoon;
+      document.getElementById("queue-note").textContent = siteData.queue.note;
+      document.getElementById("queue-updated").textContent = siteData.queue.updated;
+
+      // Price Cards
+      const priceContainer = document.getElementById("price-cards-container");
+      priceContainer.innerHTML = `
+        <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="inline-block bg-teal-50 text-teal-700 text-xs font-bold px-3 py-1 rounded-full mb-3">แพ็กเกจพื้นฐาน</span>
+            <h3 class="font-heading text-xl font-bold text-slate-900">อาบน้ำ + เป่าขน</h3>
+            <p class="font-heading text-3xl font-bold text-teal-600 my-3">เริ่มต้น ${siteData.prices.bath} ฿</p>
+            <ul class="text-sm text-slate-600 space-y-2 mb-6">
+              <li>✓ อาบน้ำแชมพูสูตรอ่อนโยน 2 รอบ</li>
+              <li>✓ เช็ดทำความสะอาดช่องหู + ตัดเล็บ + ตะไบเล็บ</li>
+              <li>✓ ไถขนอุ้งเท้า ขนก้น และบีบต่อมเหม็น</li>
+              <li>✓ เป่าขนแห้งสนิทพร้อมหวีสางขน</li>
+            </ul>
+          </div>
+          <a href="${siteData.shop.lineUrl}" target="_blank" class="block text-center bg-slate-100 hover:bg-teal-600 hover:text-white text-slate-800 font-heading text-sm font-medium py-2.5 rounded-xl transition">จองแพ็กเกจนี้</a>
+        </div>
+
+        <div class="bg-white border-2 border-teal-500 rounded-3xl p-6 shadow-md flex flex-col justify-between relative">
+          <span class="absolute -top-3 right-6 bg-teal-600 text-white text-[11px] font-bold px-3 py-0.5 rounded-full">ยอดนิยม</span>
+          <div>
+            <span class="inline-block bg-amber-50 text-amber-700 text-xs font-bold px-3 py-1 rounded-full mb-3">ครบจบหล่อสวย</span>
+            <h3 class="font-heading text-xl font-bold text-slate-900">อาบน้ำ + ตัดขนแต่งทรง</h3>
+            <p class="font-heading text-3xl font-bold text-teal-600 my-3">เริ่มต้น ${siteData.prices.groom} ฿</p>
+            <ul class="text-sm text-slate-600 space-y-2 mb-6">
+              <li>✓ รวมบริการอาบน้ำและดูแลความสะอาดครบชุด</li>
+              <li>✓ ตัดแต่งทรงขนตามสายพันธุ์หรือทรงที่เจ้าของเลือก</li>
+              <li>✓ เก็บรายละเอียดใบหน้า อุ้งเท้า และลำตัว</li>
+              <li>✓ ฉีดสเปรย์บำรุงขนหอมอ่อนโยน</li>
+            </ul>
+          </div>
+          <a href="${siteData.shop.lineUrl}" target="_blank" class="block text-center bg-teal-600 hover:bg-teal-700 text-white font-heading text-sm font-medium py-2.5 rounded-xl transition">จองแพ็กเกจนี้</a>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="inline-block bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full mb-3">ฟื้นฟูผิวหนังและขน</span>
+            <h3 class="font-heading text-xl font-bold text-slate-900">อาบน้ำ + สปาบำรุงขน</h3>
+            <p class="font-heading text-3xl font-bold text-teal-600 my-3">เริ่มต้น ${siteData.prices.spa} ฿</p>
+            <ul class="text-sm text-slate-600 space-y-2 mb-6">
+              <li>✓ แช่น้ำอุ่นสปาช่วยผ่อนคลายและเปิดรูขุมขน</li>
+              <li>✓ หมักทรีตเมนต์บำรุงเส้นขนให้นุ่มฟูไม่พันกัน</li>
+              <li>✓ ลดกลิ่นตัวและฟื้นฟูผิวหนังแห้งคัน</li>
+              <li>✓ รวมเช็ดหู ตัดเล็บ และเป่าไดร์จัดทรง</li>
+            </ul>
+          </div>
+          <a href="${siteData.shop.lineUrl}" target="_blank" class="block text-center bg-slate-100 hover:bg-teal-600 hover:text-white text-slate-800 font-heading text-sm font-medium py-2.5 rounded-xl transition">จองแพ็กเกจนี้</a>
+        </div>
+      `;
+
+      updateCalculator();
+      renderStylesGrid();
+      renderFaqList();
+
+      // Shop Contact Info
+      document.getElementById("nav-line-btn").href = siteData.shop.lineUrl;
+      document.getElementById("hero-line-btn").href = siteData.shop.lineUrl;
+      document.getElementById("footer-line-btn").href = siteData.shop.lineUrl;
+      document.getElementById("footer-map-btn").href = siteData.shop.mapUrl;
+      document.getElementById("shop-line-id").textContent = siteData.shop.lineId;
+      document.getElementById("shop-phone-text").textContent = siteData.shop.phone;
+      document.getElementById("shop-phone-link").href = "tel:" + siteData.shop.phone.replace(/[^0-9]/g, "");
+      document.getElementById("shop-address").textContent = siteData.shop.address;
+
+      // Update footer admin button status
+      const isLoggedIn = sessionStorage.getItem(SESSION_KEY) === "true";
+      document.getElementById("footer-admin-label").textContent = isLoggedIn ? "เปิดแผงควบคุมแอดมิน" : "สำหรับผู้ดูแลร้าน";
+    }
+
+    function updateCalculator() {
+      const pet = document.getElementById("calc-pet").value;
+      const size = document.getElementById("calc-size").value;
+      const service = document.getElementById("calc-service").value;
+
+      let base = Number(siteData.prices[service] || 350);
+      const sizeExtra = { xs: 0, s: 100, m: 250, l: 450 }[size] || 0;
+      const petExtra = pet === "cat" ? 50 : 0;
+
+      document.getElementById("calc-result").textContent = (base + sizeExtra + petExtra).toLocaleString() + " ฿";
+    }
+
+    document.getElementById("calc-pet").addEventListener("change", updateCalculator);
+    document.getElementById("calc-size").addEventListener("change", updateCalculator);
+    document.getElementById("calc-service").addEventListener("change", updateCalculator);
+
+    function filterStyles(filter) {
+      currentStyleFilter = filter;
+      document.querySelectorAll(".style-filter-btn").forEach(btn => {
+        if (btn.dataset.filter === filter) {
+          btn.className = "style-filter-btn active px-4 py-1.5 rounded-full text-xs font-semibold bg-teal-600 text-white transition";
+        } else {
+          btn.className = "style-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:bg-teal-50 transition";
+        }
+      });
+      renderStylesGrid();
+    }
+
+    function renderStylesGrid() {
+      const grid = document.getElementById("styles-grid");
+      const filtered = currentStyleFilter === "all"
+        ? siteData.styles
+        : siteData.styles.filter(s => s.pet === currentStyleFilter);
+
+      grid.innerHTML = filtered.map(item => `
+        <div class="bg-white border border-amber-100 rounded-3xl p-5 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-3">
+            <span class="w-12 h-12 rounded-2xl bg-amber-50 flex items-center justify-center text-2xl">${item.icon || "✂️"}</span>
+            <span class="text-xs font-semibold px-3 py-1 rounded-full ${item.pet === "dog" ? "bg-teal-50 text-teal-700" : "bg-amber-100 text-amber-800"}">
+              ${item.pet === "dog" ? "🐶 น้องหมา" : "🐱 น้องแมว"}
+            </span>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-slate-900">${item.title}</h3>
+          <p class="text-sm text-slate-600 mt-1 leading-relaxed">${item.desc}</p>
+        </div>
+      `).join("");
+    }
+
+    function renderFaqList() {
+      const container = document.getElementById("faq-container");
+      container.innerHTML = siteData.faqs.map(item => `
+        <details class="group bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 open:border-teal-300 transition">
+          <summary class="font-heading font-semibold text-slate-900 cursor-pointer flex items-center justify-between list-none">
+            <span>${item.q}</span>
+            <span class="text-teal-600 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-100 leading-relaxed">${item.a}</p>
+        </details>
+      `).join("");
+    }
+
+    function copyBookingMessage() {
+      const name = document.getElementById("quick-name").value.trim() || "ยังไม่ระบุ";
+      const date = document.getElementById("quick-date").value.trim() || "ยังไม่ระบุ";
+      const msg = `สวัสดีค่ะ สนใจจองคิวอาบน้ำ-ตัดขน ร้าน 87 Petshop & Grooming\n• ชื่อน้อง/สายพันธุ์: ${name}\n• วันเวลาที่สะดวก: ${date}`;
+      navigator.clipboard.writeText(msg).then(() => {
+        const fb = document.getElementById("copy-feedback");
+        fb.classList.remove("hidden");
+        setTimeout(() => fb.classList.add("hidden"), 4000);
+      });
+    }
+
+    // ==========================================
+    // ADMIN MODAL & AUTHENTICATION LOGIC
+    // ==========================================
+    function openAdminModal() {
+      const modal = document.getElementById("admin-modal");
+      modal.classList.remove("hidden");
+      const isLoggedIn = sessionStorage.getItem(SESSION_KEY) === "true";
+      if (isLoggedIn) {
+        showAdminDashboard();
+      } else {
+        document.getElementById("admin-login-view").classList.remove("hidden");
+        document.getElementById("admin-dashboard-view").classList.add("hidden");
+        document.getElementById("admin-login-error").classList.add("hidden");
+      }
+    }
+
+    function closeAdminModal() {
+      document.getElementById("admin-modal").classList.add("hidden");
+    }
+
+    function handleAdminLogin(e) {
+      e.preventDefault();
+      const user = document.getElementById("admin-user-input").value.trim();
+      const pass = document.getElementById("admin-pass-input").value.trim();
+
+      if (user === ADMIN_USER && pass === ADMIN_PASS) {
+        sessionStorage.setItem(SESSION_KEY, "true");
+        document.getElementById("admin-login-error").classList.add("hidden");
+        document.getElementById("footer-admin-label").textContent = "เปิดแผงควบคุมแอดมิน";
+        showAdminDashboard();
+      } else {
+        document.getElementById("admin-login-error").classList.remove("hidden");
+      }
+    }
+
+    function handleAdminLogout() {
+      sessionStorage.removeItem(SESSION_KEY);
+      document.getElementById("footer-admin-label").textContent = "สำหรับผู้ดูแลร้าน";
+      closeAdminModal();
+    }
+
+    function showAdminDashboard() {
+      document.getElementById("admin-login-view").classList.add("hidden");
+      document.getElementById("admin-dashboard-view").classList.remove("hidden");
+      populateAdminForms();
+    }
+
+    function switchAdminTab(tabName) {
+      document.querySelectorAll(".admin-tab-content").forEach(el => el.classList.add("hidden"));
+      document.getElementById("tab-" + tabName).classList.remove("hidden");
+
+      document.querySelectorAll(".admin-tab-btn").forEach(btn => {
+        if (btn.dataset.tab === tabName) {
+          btn.className = "admin-tab-btn px-3.5 py-2 rounded-t-xl text-xs font-bold bg-white text-teal-700 border-t border-x border-slate-200";
+        } else {
+          btn.className = "admin-tab-btn px-3.5 py-2 rounded-t-xl text-xs font-semibold text-slate-600 hover:bg-white/60";
+        }
+      });
+    }
+
+    function populateAdminForms() {
+      // Queue
+      document.getElementById("edit-queue-status").value = siteData.queue.status;
+      document.getElementById("edit-queue-morning").value = siteData.queue.morning;
+      document.getElementById("edit-queue-afternoon").value = siteData.queue.afternoon;
+      document.getElementById("edit-queue-note").value = siteData.queue.note;
+
+      // Prices
+      document.getElementById("edit-price-bath").value = siteData.prices.bath;
+      document.getElementById("edit-price-groom").value = siteData.prices.groom;
+      document.getElementById("edit-price-spa").value = siteData.prices.spa;
+
+      // Shop Settings
+      document.getElementById("edit-shop-line-url").value = siteData.shop.lineUrl;
+      document.getElementById("edit-shop-line-id").value = siteData.shop.lineId;
+      document.getElementById("edit-shop-phone").value = siteData.shop.phone;
+      document.getElementById("edit-shop-map").value = siteData.shop.mapUrl;
+      document.getElementById("edit-shop-address").value = siteData.shop.address;
+
+      renderAdminStylesList();
+      renderAdminFaqList();
+    }
+
+    function saveQueueSettings() {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString("th-TH", { hour: "2-digit", minute: "2-digit" });
+      siteData.queue = {
+        status: document.getElementById("edit-queue-status").value,
+        morning: document.getElementById("edit-queue-morning").value.trim(),
+        afternoon: document.getElementById("edit-queue-afternoon").value.trim(),
+        note: document.getElementById("edit-queue-note").value.trim(),
+        updated: `วันนี้ ${timeStr} น.`
+      };
+      saveSiteData();
+    }
+
+    function savePriceSettings() {
+      siteData.prices = {
+        bath: Number(document.getElementById("edit-price-bath").value) || 350,
+        groom: Number(document.getElementById("edit-price-groom").value) || 550,
+        spa: Number(document.getElementById("edit-price-spa").value) || 650
+      };
+      saveSiteData();
+    }
+
+    function renderAdminStylesList() {
+      const list = document.getElementById("admin-styles-list");
+      list.innerHTML = siteData.styles.map(s => `
+        <div class="flex items-center justify-between bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm">
+          <div>
+            <span class="font-bold text-slate-800">${s.pet === "dog" ? "🐶" : "🐱"} ${s.title}</span>
+            <span class="text-xs text-slate-500 block">${s.desc}</span>
+          </div>
+          <button onclick="deleteStyle(${s.id})" class="text-xs text-rose-600 hover:underline font-semibold">ลบ</button>
+        </div>
+      `).join("");
+    }
+
+    function addNewStyle() {
+      const pet = document.getElementById("new-style-pet").value;
+      const title = document.getElementById("new-style-title").value.trim();
+      const desc = document.getElementById("new-style-desc").value.trim();
+      if (!title) return;
+
+      siteData.styles.unshift({
+        id: Date.now(),
+        pet,
+        title,
+        desc: desc || "ตัดแต่งทรงสวยงามตามความเหมาะสมของสภาพขน",
+        icon: pet === "dog" ? "🐶" : "🐱"
+      });
+      document.getElementById("new-style-title").value = "";
+      document.getElementById("new-style-desc").value = "";
+      renderAdminStylesList();
+      saveSiteData();
+    }
+
+    function deleteStyle(id) {
+      siteData.styles = siteData.styles.filter(s => s.id !== id);
+      renderAdminStylesList();
+      saveSiteData();
+    }
+
+    function renderAdminFaqList() {
+      const list = document.getElementById("admin-faq-list");
+      list.innerHTML = siteData.faqs.map(f => `
+        <div class="flex items-start justify-between gap-3 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm">
+          <div>
+            <span class="font-bold text-slate-800 block">${f.q}</span>
+            <span class="text-xs text-slate-500">${f.a}</span>
+          </div>
+          <button onclick="deleteFaq(${f.id})" class="text-xs text-rose-600 hover:underline font-semibold shrink-0">ลบ</button>
+        </div>
+      `).join("");
+    }
+
+    function addNewFaq() {
+      const q = document.getElementById("new-faq-q").value.trim();
+      const a = document.getElementById("new-faq-a").value.trim();
+      if (!q || !a) return;
+
+      siteData.faqs.unshift({ id: Date.now(), q, a });
+      document.getElementById("new-faq-q").value = "";
+      document.getElementById("new-faq-a").value = "";
+      renderAdminFaqList();
+      saveSiteData();
+    }
+
+    function deleteFaq(id) {
+      siteData.faqs = siteData.faqs.filter(f => f.id !== id);
+      renderAdminFaqList();
+      saveSiteData();
+    }
+
+    function saveShopSettings() {
+      siteData.shop = {
+        lineUrl: document.getElementById("edit-shop-line-url").value.trim() || "https://line.me",
+        lineId: document.getElementById("edit-shop-line-id").value.trim() || "@87petshop",
+        phone: document.getElementById("edit-shop-phone").value.trim() || "080-000-0087",
+        mapUrl: document.getElementById("edit-shop-map").value.trim() || "https://maps.google.com",
+        address: document.getElementById("edit-shop-address").value.trim()
+      };
+      saveSiteData();
+    }
+
+    function resetAllDefaultData() {
+      siteData = JSON.parse(JSON.stringify(DEFAULT_DATA));
+      populateAdminForms();
+      saveSiteData();
+    }
+
+    function showToast() {
+      const toast = document.getElementById("admin-save-toast");
+      toast.classList.remove("hidden");
+      setTimeout(() => toast.classList.add("hidden"), 2500);
+    }
+
+    // Initialize Page
+    renderAllPublicSections();
+  </script>
+</body>
+</html>
